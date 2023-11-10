@@ -1,3 +1,131 @@
+/* Global styles */
 html {
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, rgb(64, 145, 108) 35%, rgb(45, 106, 79));
+    color: #fff;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculator container styles */
+.calculator-container {
+    max-height: 67vh;
+    max-width: 40vw;
+    overflow: auto;
+    background: linear-gradient(to bottom, rgb(216, 243, 220), rgb(45, 106, 79) 40%,rgb(8, 28, 21));
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow for the entire calculator */
+}
+
+/* Display styles */
+.display {
+    background: linear-gradient(to bottom, rgb(27, 67, 50), rgb(8, 28, 21));
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem; /* Increased font size */
+    text-align: right;
+    color: #f0f0f0;
+    width: 20vw;
+    min-height: 9.375vh;
+    max-height: 40vh;
+    overflow: auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column-reverse; /* Align numbers at the bottom */
+}
+
+/* Button row styles */
+.buttonRow {
+    display: flex;
+    width: 90%;
+    height: 5vh;
+    margin: 1em auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clear and delete button styles */
+.clearButton,
+.deleteButton {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 9vw;
+    height: 2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(216, 243, 220);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.clearButton:hover,
+.deleteButton:hover {
+    background-color: rgb(116, 198, 157);
+    color: #fff;
+}
+
+/* Number segment styles */
+.numberSegment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Number, operation, equal, and decimal button styles */
+.numberButton,
+.operationButton,
+.equalButton,
+.decimalButton {
+    flex: 1;
+    min-width: 4vw;
+    max-width: 5vw;
+    min-height: 3em;
+    max-height: 5em;
+    height: 2.5em;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(216, 243, 220);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+/* Hover styles for buttons */
+.clearButton:hover,
+.deleteButton:hover,
+.numberButton:hover,
+.operationButton:hover,
+.equalButton:hover,
+.decimalButton:hover {
+    background-color: rgb(116, 198, 157);
+    color: #fff;
+}
+
+/* Margin for number segment */
+.numberSegment {
+    margin-bottom: 1em;
+}
+ 

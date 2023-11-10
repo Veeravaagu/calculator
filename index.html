@@ -6,48 +6,50 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <div><h1>Calculator</h1></div>
 
-    <div>
+    <div class="calculator-container">
         <div><div class="display"></div></div>
     
-        <div>
+        <div class="buttonRow">
             <div><button class="clearButton">Clear</button></div>
             <div><button class="deleteButton">Delete</button></div>
         </div>
         
-        <div>
+        <div class="numberSegment">
             <div><button class="numberButton">7</button></div>
             <div><button class="numberButton">8</button></div>
             <div><button class="numberButton">9</button></div>
             <div><button class="operationButton">/</button></div>
         </div>
         
-        <div>
+        <div class="numberSegment">
             <div><button class="numberButton">4</button></div>
             <div><button class="numberButton">5</button></div>
             <div><button class="numberButton">6</button></div>
             <div><button class="operationButton">*</button></div>
         </div>
 
-        <div>
+        <div class="numberSegment">
             <div><button class="numberButton">1</button></div>
             <div><button class="numberButton">2</button></div>
             <div><button class="numberButton">3</button></div>
             <div><button class="operationButton">-</button></div>
         </div>
         
-        <div>
+        <div class="numberSegment">
             <div><button class="decimalButton">.</button></div>
             <div><button class="numberButton">0</button></div>
             <div><button class="equalButton">=</button></div>
             <div><button class="operationButton">+</button></div>
         </div>
     </div>
-    
 
     <script src="main.js"></script>
 </body>
