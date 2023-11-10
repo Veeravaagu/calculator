@@ -1,4 +1,4 @@
-let buttons = document.querySelectorAll('.numberButton, .operationButton, .equalButton, .deleteButton, .decimalButton, .clearButton');
+const buttons = document.querySelectorAll('.numberButton, .operationButton, .equalButton, .deleteButton, .decimalButton, .clearButton');
 const displayScreen = document.querySelector('.display');
 
 function getDisplay(value) {
@@ -11,6 +11,7 @@ let firstOperand = '';
 let secondOperand = '';
 let operators = '';
 let equalsOperator = '';
+let result;
 
 buttons.forEach(function(button) {
   button.addEventListener('click', handleClick);
@@ -37,16 +38,85 @@ function handleClick(event) {
                       (secondOperand === '') ? `${parseFloat(firstOperand)}${operators}` :
                       `${parseFloat(firstOperand)}${operators}${parseFloat(secondOperand)}`;
 
-  // console.log(updatedDisplay);
-
   getDisplay(updatedDisplay)
 
-  return;
-}
+    // Perform the calculation when '=' is clicked
+    if (clickedValue === '=' && operators !== '' && firstOperand !== '' && secondOperand !== '') {
+      calculate();
+    }
+  
+    return;
+  }
+  
+  
+  function calculate() {
+    // Convert operands to numbers
+    const a = parseFloat(firstOperand);
+    const b = parseFloat(secondOperand);
+  
+    // Perform the calculation based on the operator
+    switch (operators) {
+      case '+':
+        result = isAdd(a, b);
+        break;
+      case '-':
+        result = isSubtract(a, b);
+        break;
+      case 'x':
+        result = isMultiply(a, b);
+        break;
+      case '/':
+        result = isDivide(a, b);
+        break;
+        case 'Clear':
+        result = isClear();
+        break;
+        case 'Delete':
+        result = isDelete(a, b);
+        break;
+      default:
 
-    
+        break;
+    }
   
+    // Update the display with the result
+    getDisplay(result);
   
+    // Reset operands and operator
+    firstOperand = result.toString();
+    secondOperand = '';
+    operators = '';
+  }
+  
+  function isAdd(a, b) {
+    return a + b;
+  }
+  
+  function isSubtract(a, b) {
+    return a - b;
+  }
+  
+  function isMultiply(a, b) {
+    return a * b;
+  }
+  
+  function isDivide(a, b) {
+    // Handle division by zero
+    return b !== 0 ? a / b : 'Error';
+  }
+  function isClear() {
+    firstOperand = '';
+    secondOperand = '';
+    operators = '';
+    equalsOperator = '';
+    return
+  }
+  function isDelete(a, b) {
+    return ;
+  }
+  
+
+
 
 
 
