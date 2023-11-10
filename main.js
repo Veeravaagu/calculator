@@ -1,8 +1,9 @@
 let buttons = document.querySelectorAll('.numberButton, .operationButton, .equalButton, .deleteButton, .decimalButton, .clearButton');
 let clickedValue;
-let firstOperand = ''
-let secondOperand = ''
-let operators = ''
+let firstOperand = '';
+let secondOperand = '';
+let operators = '';
+let equalsOperator = '';
 
   buttons.forEach(function(button) {
     button.addEventListener('click', handleClick);
@@ -10,49 +11,42 @@ let operators = ''
 
   function handleClick(event)
    {
-    function result () {
-    // total = `${parseFloat(firstOperand)} + ${operators} + ${parseFloat(secondOperand)}` 
-    
-    clickedValue = event.target.textContent;
-    // const operand = (clickedValue - clickedValue);
-    // if (isNaN(parseFloat(clickedValue)) === false){
-    //   firstOperand += clickedValue;
-    //   console.log(firstOperand);
-    // }
-    // // else if (Number.isNaN(operand) !== true && operators !== true){
-    // //   secondOperand += clickedValue;
-    // //   console.log(+secondOperand);
-    // // }
-    // else if (isNaN(parseFloat(clickedValue)) === true && operators.length < 1){
-    //   operators += clickedValue;
-    //   console.log(operators);
-    // }
+clickedValue = event.target.textContent;
+
 const firstOperandCondition = (isNaN(parseFloat(clickedValue)) === false && operators.length === 0);
 
 const operatorsCondition = ((isNaN(parseFloat(clickedValue)) === true && operators.length < 1) && clickedValue !== ('=' || 'Clear' || 'Delete'));
 
-const secondOperandCondition = (isNaN(parseFloat(clickedValue)) === false && operators.length === 1);
+const secondOperandCondition = ((isNaN(parseFloat(clickedValue)) === false && operators.length === 1) && equalsOperator === '') ;
 
-// console.log(firstOperandCondition);
-
-const display = firstOperandCondition ?  firstOperand += clickedValue :
+let display = firstOperandCondition ?  firstOperand += clickedValue :
               operatorsCondition ? operators += clickedValue :
               secondOperand += clickedValue;
 
-              console.log(display);
 
 
-              // (isNaN(parseFloat(clickedValue)) === false && operators.length === 1) ? 
+if (operators === ''){
+  console.log((display += clickedValue).slice(0,-1));
+}
 
-              console.log(`${parseFloat(firstOperand)}${operators}${parseFloat(secondOperand)}` );
+else if (secondOperand === '') {
+  console.log(`${parseFloat(firstOperand)}${operators}`);
+} else{
+  console.log(`${parseFloat(firstOperand)}${operators}${parseFloat(secondOperand)}` );
+}
+              
+             
+// let result = parseFloat(firstOperand) + operators + parseFloat(secondOperand);
+
+// console.log(result);
 
 
 
 
 
 
-  }
-    return result()
+  
+    return
   }
 
 
