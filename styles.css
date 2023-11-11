@@ -20,9 +20,9 @@ body {
     max-height: 67vh;
     max-width: 40vw;
     overflow: auto;
-    background: linear-gradient(to bottom, rgb(216, 243, 220), rgb(45, 106, 79) 40%,rgb(8, 28, 21));
+    background: linear-gradient(to bottom, rgb(216, 243, 220), rgb(45, 106, 79) 40%, rgb(8, 28, 21));
     border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow for the entire calculator */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
 }
 
 /* Display styles */
@@ -31,7 +31,7 @@ body {
     border: 1px solid #ccc;
     padding: 1rem;
     margin-bottom: 1rem;
-    font-size: 2rem; /* Increased font size */
+    font-size: 2rem; 
     text-align: right;
     color: #f0f0f0;
     width: 20vw;
@@ -40,7 +40,7 @@ body {
     overflow: auto;
     border-radius: 1rem;
     display: flex;
-    flex-direction: column-reverse; /* Align numbers at the bottom */
+    flex-direction: column-reverse; 
 }
 
 /* Button row styles */
@@ -75,6 +75,7 @@ body {
     transition: background-color 0.3s;
 }
 
+/* Hover styles for Clear and Delete buttons */
 .clearButton:hover,
 .deleteButton:hover {
     background-color: rgb(116, 198, 157);
@@ -113,7 +114,7 @@ body {
     transition: background-color 0.3s;
 }
 
-/* Hover styles for buttons */
+/* Hover styles for all buttons */
 .clearButton:hover,
 .deleteButton:hover,
 .numberButton:hover,
@@ -128,4 +129,5 @@ body {
 .numberSegment {
     margin-bottom: 1em;
 }
+
  

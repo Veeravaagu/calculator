@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the HTML document -->
     <title>Calculator</title>
+    
+    <!-- Stylesheet links for custom styles and reset styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="reset.css">
+    
+    <!-- Link to Google Fonts - Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-
+    <!-- Calculator container -->
     <div class="calculator-container">
-        <div><div class="display"></div></div>
-    
+        <!-- Display area -->
+        <div>
+            <div class="display"></div>
+        </div>
+
+        <!-- Button row for Clear and Delete buttons -->
         <div class="buttonRow">
             <div><button class="clearButton">Clear</button></div>
             <div><button class="deleteButton">Delete</button></div>
         </div>
         
+        <!-- Number segments with number buttons and operation buttons -->
         <div class="numberSegment">
             <div><button class="numberButton">7</button></div>
             <div><button class="numberButton">8</button></div>
@@ -51,6 +62,7 @@
         </div>
     </div>
 
+    <!-- Script link for the JavaScript file -->
     <script src="main.js"></script>
 </body>
 </html>
